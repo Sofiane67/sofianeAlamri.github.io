@@ -21,8 +21,6 @@ html{
 body{
     font-family: 'Raleway', sans-serif;
     font-size: 1.6rem;
-    display: flex;
-    justify-content: center;
 }
 
 a{
@@ -34,9 +32,16 @@ li{
     list-style: none;
 }
 
+button{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
 .container{
-    width: 134rem;
     display: grid;
+    grid-template-columns: 1fr 132rem 1fr;
     grid-row-gap: 5rem;
 }
 
@@ -45,16 +50,12 @@ li{
 ================*/
 
 .header{
+    grid-column: 2/3;
+    padding-top: 5rem;
     display: grid;
     grid-template-columns: [full-start]1fr minmax(min-content, 34rem) minmax(min-content, 15rem) [full-end];
     grid-row-gap: 3rem;
     align-items: center;
-}
-
-.header__logo-box{
-    /* padding: 5rem 0; */
-    padding-top: 5rem;
-    padding-bottom: 2rem;
 }
 
 .nav{
@@ -176,6 +177,8 @@ li{
 
 /*Parent*/
 .lodging{
+    grid-column: 2/3;
+    grid-row: 2/3;
     font-weight: 700;
     display: grid;
     grid-template-columns: repeat(2,1fr) minmax(38rem, 1fr);
@@ -193,7 +196,9 @@ li{
     margin-bottom: 1.5rem;
 }
 
-.filter:link, .filter:visited{
+.filter{
+    font-size: inherit;
+    font-weight: 600;
     border: solid 2px #d9d9d9;
     border-radius: 5rem;
     height: 5rem;
@@ -253,23 +258,55 @@ li{
 /*========================
     LODGING SECTION END
 ========================*/
-/*==========================
-    ACTIVITIES SECTION END
-==========================*/
+/*=============================
+    ACTIVITIES SECTION START
+==============================*/
 
 .activities{
+    grid-column: 2/3;
+    grid-row: 3/4;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(26rem,1fr));;
     grid-column-gap: 3rem;
 }
 
-.activities .heading-secondary{
-    padding-bottom: 3rem;
-}
-
 /*==========================
     ACTIVITIES SECTION END
 ==========================*/
+
+/*=================
+    FOOTER START
+=================*/
+
+.footer{
+    grid-column: 1 / -1;
+    background-color: var(--color-gray-light);
+    display: grid;
+    grid-template-columns: 1fr minmax(min-content,132rem) 1fr;
+    /* height: 20rem; */
+    padding: 4rem 0;
+    align-items: center;
+}
+
+.footer__nav{
+    grid-column: 2/3;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem,1fr));
+    grid-row-gap: 4rem;
+}
+
+.footer__list{
+    margin-top: 1.5rem;
+}
+
+.footer__link{
+    font-size: 1.5rem;
+    line-height: 3rem;
+}
+
+/*================
+    FOOTER END
+=================*/
 
 /*==================
     CARD START
@@ -378,12 +415,6 @@ li{
     BUTTON START
 ==================*/
 
-.btn{
-    outline: none;
-    border: none;
-    cursor: pointer;
-}
-
 .btn--search{
     font-size: inherit;
     font-weight: 600;
@@ -468,6 +499,25 @@ li{
 =================*/
 
 /* large device */
+
+@media only screen and (min-width: 1800px){
+    html{
+        font-size: 80%;
+    }
+    body{
+        font-size: 2rem;
+    }
+
+    .header__logo{
+        height: 6.5rem;
+    }
+
+    .lodging__info,
+    .footer__link{
+        font-size: 1.8rem;
+    }
+}
+
 @media only screen and (max-width: 1340px){
     html{
         /* 8 / 16 = 0.5 => defined 1rem = 8px */
@@ -490,6 +540,10 @@ li{
         font-size: 1.5rem;
         line-height: 3rem;
     }
+
+    .footer__link{
+        font-size: 1.9rem;
+    }
 }
 
 /* LAYOUT OF ACTIVITIES IN DESKTOP FORMAT*/
@@ -499,6 +553,10 @@ li{
         grid-template-rows: min-content 18rem repeat(2, 4rem) 18rem;
         grid-template-columns: repeat(4, 1fr);
         grid-column-gap: 3rem;
+    }
+
+    .activities .heading-secondary{
+        padding-bottom: 3rem;
     }
 
     .card__img-box--activity{
@@ -540,12 +598,23 @@ li{
     }
 }
 
+
+
 /* medium device */
 @media only screen and (max-width: 1100px){
     .container{
-        width: 100%;
+        grid-template-columns: 1fr 100% 1fr;
+    } 
+
+    .footer{
+        padding-left: 3rem;
+    }
+}
+
+@media only screen and (min-width:600px) and (max-width: 1100px){
+    .container > *:not(:last-child){
         padding: 0 3rem;
-    }    
+    }
 }
 
 @media only screen and (min-width:740px) and (max-width: 1100px){
@@ -694,6 +763,10 @@ li{
     /*=========================
         LODGING SECTION START
     =========================*/
+    .lodging{
+        grid-gap: 0;
+    }
+
     .heading-tertiary--filter{
         width: 100%;
     }
@@ -732,4 +805,5 @@ li{
     .card__body{
         font-size: 1.8rem;
     }
+
 }
