@@ -34,12 +34,12 @@
                 </h1>
                 <form action="#" class="search">
                     <!-- map marker icon -->
-                    <div class="search__icon-box icon-box icon-box--gray">
+                    <label for="search" class="search__icon-box icon-box icon-box--gray">
                         <svg class="icon icon--black icon--20">
                             <use xlink:href="images/icons/sprite.svg#icon-marker-map"></use>
                         </svg>
-                    </div>
-                    <input type="text" class="search__input" placeholder="Marseille, France">
+                    </label>
+                    <input type="text" id="search" class="search__input" placeholder="Marseille, France">
                     <button class="btn btn--search">
                         <span class="search__btn-text">Rechercher</span>
 
@@ -57,7 +57,7 @@
             <section id="lodging" class="lodging">
                 <!-- FILTERS  -->
                 <div class="lodging__filters">
-                    <h2 class="heading-tertiary heading-tertiary--filter">Filtres</h2>
+                    <h2 class="heading-secondary heading-secondary--filter">Filtres</h2>
                     <!-- Economique -->
                     <button class="filter">
                         <span class="icon-box icon-box--blue-light">
@@ -106,7 +106,7 @@
                     </p>
                 </div>
                 <!-- LODGING LIST -->
-                <div class="lodging__available">
+                <section class="lodging__available">
                     <h2 class="heading-secondary">Hébergements à Marseille</h2>
                     <a href="#" class="card-link">
                         <figure class="card card--available">
@@ -277,7 +277,7 @@
                         </figure>
                     </a>
                     <a href="#" class="view-more">Afficher plus</a>
-                </div>
+                </section>
                 <!-- POPULAR -->
                 <aside class="lodging__popular">
                     <h2 class="heading-secondary heading-secondary--popular">
