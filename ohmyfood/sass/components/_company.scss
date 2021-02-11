@@ -1,0 +1,26 @@
+.company{
+    color: $color-gray-dark;
+    
+    &__location{
+        background-color: $color-gray-location;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        padding: 1.5rem 0;
+    }
+
+    &__city{
+        margin-left: 1rem;
+    }
+
+    &__text-box{
+        background-color: $color-gray-light;
+        padding: 4rem;
+        text-align: center;
+    }
+
+    &__text{
+        padding: 2rem 0;
+        text-align: center;
+    }
+}

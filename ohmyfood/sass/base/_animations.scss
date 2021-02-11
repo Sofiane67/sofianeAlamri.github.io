@@ -1,0 +1,59 @@
+//INNER PAGE
+
+@keyframes displayDishes {
+    0%{
+        opacity: 0;
+        transform: translateY(10rem);
+    }
+
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+//LOADER
+
+@keyframes hidden-loader{
+    100%{
+        visibility: hidden;
+    }
+}
+
+@keyframes spinner{
+    from{
+        transform: rotate(0);
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes ball-1{
+    0%{
+        transform: translate(0,0);
+    }
+    100%{
+        transform: translate(0, 100%);
+    }
+}
+
+@keyframes ball-2{
+    0%{
+        transform: translate(0,-100%);
+    }
+    100%{
+        transform: translate(100%, -100%);
+    }
+}
+
+@keyframes ball-3{
+    0%{
+        transform: translate(0,-200%);
+    }
+    100%{
+        transform: translate(-100%, -200%);
+    }
+}

@@ -1,0 +1,30 @@
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+
+    @include media-queries(map-get($breakpoints, bp-850)){
+        font-size: 70%;
+    }
+}
+
+body{
+}
+
+.inner-body{
+    background-color: $color-gray-light;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+a{
+    color: currentColor;
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
