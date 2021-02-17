@@ -1,17 +1,28 @@
+// Dans ce fichier se trouve toute les propriétés reset
+
+
 html{
+    /* 10/16 = 0.625 => 62.5% => 1rem = 10px*/
     font-size: 62.5%;
     box-sizing: border-box;
 
     @include media-queries(map-get($breakpoints, bp-850)){
         font-size: 70%;
     }
+
+    @include media-queries(map-get($breakpoints, bp-2000)){
+        font-size: 100%;
+    }
 }
 
 body{
+    height: 100vh;
+    display: grid;
 }
 
 .inner-body{
     background-color: $color-gray-light;
+    display: initial;
 }
 
 *{

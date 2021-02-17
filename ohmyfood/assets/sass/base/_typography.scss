@@ -1,3 +1,5 @@
+// Dans ce fichier se trouve toutes les propriétés css qui concernent la typographie : font-family, font-size, font-weight...
+
 body{
     font-size: 1.6rem;
     font-family: 'Roboto', sans-serif;
@@ -11,6 +13,7 @@ body{
 
 .logo{    
     font-size: 3.5rem;
+
     &--footer{
         font-size: 2rem;
         margin-bottom: 2.5rem;
@@ -42,6 +45,7 @@ body{
 
 }
 
+/* titre h2 */
 .heading-secondary{
     font-size: 2.5rem;
     color: $color-black;

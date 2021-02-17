@@ -1,0 +1,24 @@
+//Permet d'ajouter une box-shadow a un bloc, il prend en paramètre le pourcentage d'opacité pour la couleur rgba
+@mixin box-shadow($opacity){
+    box-shadow: 0 .3rem 1rem rgba($color-black, $opacity);
+}
+
+// Permet d'ajouter un media query, il prend en paramètre une valeur qui definit le breakpoint
+@mixin media-queries($breakpoint){
+    @media only screen and (min-width: $breakpoint){
+        @content;
+    }
+}
+
+
+// Permet d'ajouter l'animation displayDishes.
+// Ce mixin prend une valeur en paramètre qui correspond au delai (nombre de seconde) après lequel on souhaite que l'animatin se lance.
+// La valeur par defaut est 0.
+
+@mixin displayDishes($delay: 0s){
+    animation: displayDishes 1.5s cubic-bezier(0.5, 1, 0.89, 1) $delay;
+
+    @if ($delay != 0){
+        animation-fill-mode: backwards; //Applique les propriétés css du debut de l'animation sans considérer le délai
+    }
+}

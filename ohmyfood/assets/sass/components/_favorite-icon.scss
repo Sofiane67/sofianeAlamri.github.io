@@ -1,9 +1,10 @@
- .favorite{
+//Composant pour l'icon Coeur qui permet d'ajouter un plat au favoris
+
+.favorite{
     position: relative;
     width: 2.5rem;
     height: 2.5rem;
     background: $color-gray-light;
-    mix-blend-mode: darken;
     
     &--menu{
         width: 3rem;
@@ -11,6 +12,7 @@
     }
     
     &::after{
+        /* Ce pseudo-element prend tous l'espace disponible, en lui appliquant la propriété mix-blend-mode: screen cela nous permet d'avoir une couleur de fond uniquement derrière l'icon coeur. L'affichage au survol est géré avec opacity */
         content: "";
         display: block;
         position: absolute;
@@ -34,6 +36,7 @@
         }
 
         &--menu{
+            /* Definit la taille de l'icon sur la page des menu */
             width: 3rem;
             height: 3rem;
         }

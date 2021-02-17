@@ -9,9 +9,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    <!--LOADER SPINNER-->
     <div class="loader">
         <div class="loader__spinner">
             <div class="loader__ball loader__ball--1"></div>
@@ -22,49 +23,55 @@
     <header class="header">
         <h1 class="logo logo--header">ohmyfood</h1>
     </header>
-    <section class="company">
-        <div class="company__location">
+    <!--Introduction de la page : Localisation des restaurants - presentation de l'entreprise -->
+    <section class="intro">
+        <!--Localisation-->
+        <div class="intro__location">
             <svg class="icon icon--gray-dark">
-                <use xlink:href="images/icons/sprite.svg#icon-map-marker"></use>
+                <use xlink:href="assets/images/icons/sprite.svg#icon-map-marker"></use>
             </svg>
-            <p class="company__city">Paris, Belleville</p>
+            <p class="intro__city">Paris, Belleville</p>
         </div>
-        <div class="company__text-box">
+        <!--Presentation de l'entreprise-->
+        <div class="intro__text-box">
             <h2 class="heading-secondary">Réservez le menu qui vous convient</h2>
-            <p class="company__text">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
+            <p class="intro__text">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
             <a href="#restaurant" class="btn">Explorer nos restaurants</a>
         </div>
     </section>
+    <!--Fonctionnement-->
     <section class="operation">
         <h2 class="heading-secondary">Fonctionnement</h2>
         <div class="step">
             <span class="step__number">1</span>
             <svg class="step__icon icon icon--gray">
-                <use xlink:href="images/icons/sprite.svg#icon-mobile"></use>
+                <use xlink:href="assets/images/icons/sprite.svg#icon-mobile"></use>
             </svg>
             <p class="step__text">Choisissez un restaurant</p>
         </div>
         <div class="step">
             <span class="step__number">2</span>
             <svg class="step__icon icon icon--gray">
-                <use xlink:href="images/icons/sprite.svg#icon-list"></use>
+                <use xlink:href="assets/images/icons/sprite.svg#icon-list"></use>
             </svg>
             <p class="step__text">Composez votre menu</p>
         </div>
         <div class="step">
             <span class="step__number">3</span>
             <svg class="step__icon icon icon--gray">
-                <use xlink:href="images/icons/sprite.svg#icon-store"></use>
+                <use xlink:href="assets/images/icons/sprite.svg#icon-store"></use>
             </svg>
             <p class="step__text">Dégustez au restaurant</p>
         </div>
     </section>
+    <!--Liste des restaurants-->
     <section id="restaurant" class="restaurant">
         <h2 class="heading-secondary">Restaurants</h2>
+        <!-- CARD - La palette du goût -->
         <a href="pages/lapalettedugout.html" class="card-link">
             <figure class="card">
                 <div class="card__img-box">
-                    <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Restaurant la palette du goût" class="card__img">
+                    <img src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Restaurant la palette du goût" class="card__img">
                 </div>
                 <span class="card__tag">Nouveau</span>
                 <figcaption class="card__body">
@@ -72,10 +79,10 @@
                         La pallette du goût
                         <span class="favorite">
                             <svg class="favorite__icon favorite__icon--home favorite__icon--show">
-                                <use xlink:href="images/icons/sprite.svg#icon-heart"></use>
+                                <use xlink:href="assets/images/icons/sprite.svg#icon-heart"></use>
                             </svg>
                             <svg class="favorite__icon favorite__icon--home favorite__icon--hidden">
-                                <use xlink:href="images/icons/sprite.svg#icon-heart-solid"></use>
+                                <use xlink:href="assets/images/icons/sprite.svg#icon-heart-solid"></use>
                             </svg>
                         </span>
                     </h3>
@@ -83,10 +90,11 @@
                 </figcaption>
             </figure>
         </a>
+        <!-- CARD - La note enchantée -->
         <a href="pages/lanoteenchantee.html" class="card-link">
             <figure class="card">
                 <div class="card__img-box">
-                    <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Restaurant La note enchantée" class="card__img">
+                    <img src="assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Restaurant La note enchantée" class="card__img">
                 </div>
                 <span class="card__tag">Nouveau</span>
                 <figcaption class="card__body">
@@ -94,10 +102,10 @@
                         La note enchantée
                         <span class="favorite">
                             <svg class="favorite__icon favorite__icon--home favorite__icon--show">
-                                <use xlink:href="images/icons/sprite.svg#icon-heart"></use>
+                                <use xlink:href="assets/images/icons/sprite.svg#icon-heart"></use>
                             </svg>
                             <svg class="favorite__icon favorite__icon--home favorite__icon--hidden">
-                                <use xlink:href="images/icons/sprite.svg#icon-heart-solid"></use>
+                                <use xlink:href="assets/images/icons/sprite.svg#icon-heart-solid"></use>
                             </svg>
                         </span>
                     </h3>
@@ -105,10 +113,11 @@
                 </figcaption>
             </figure>
         </a>
+        <!-- CARD - A la française -->
         <a href="pages/alafrancaise.html" class="card-link">
             <figure class="card">
                 <div class="card__img-box">
-                    <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Restaurant A la française"
+                    <img src="assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Restaurant A la française"
                         class="card__img">
                 </div>
                 <figcaption class="card__body">
@@ -116,10 +125,10 @@
                         &Agrave; la française
                         <span class="favorite">
                             <svg class="favorite__icon favorite__icon--home favorite__icon--show">
-                                <use xlink:href="images/icons/sprite.svg#icon-heart"></use>
+                                <use xlink:href="assets/images/icons/sprite.svg#icon-heart"></use>
                             </svg>
                             <svg class="favorite__icon favorite__icon--home favorite__icon--hidden">
-                                <use xlink:href="images/icons/sprite.svg#icon-heart-solid"></use>
+                                <use xlink:href="assets/images/icons/sprite.svg#icon-heart-solid"></use>
                             </svg>
                         </span>
                     </h3>
@@ -127,10 +136,11 @@
                 </figcaption>
             </figure>
         </a>
+        <!-- CARD - Le délice des sens -->
         <a href="pages/ledelicedessens.html" class="card-link">
             <figure class="card">
                 <div class="card__img-box">
-                    <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Restaurant Le délice des sens"
+                    <img src="assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Restaurant Le délice des sens"
                         class="card__img">
                 </div>
                 <figcaption class="card__body">
@@ -138,10 +148,10 @@
                         Le délice des sens
                         <span class="favorite">
                             <svg class="favorite__icon favorite__icon--home favorite__icon--show">
-                                <use xlink:href="images/icons/sprite.svg#icon-heart"></use>
+                                <use xlink:href="assets/images/icons/sprite.svg#icon-heart"></use>
                             </svg>
                             <svg class="favorite__icon favorite__icon--home favorite__icon--hidden">
-                                <use xlink:href="images/icons/sprite.svg#icon-heart-solid"></use>
+                                <use xlink:href="assets/images/icons/sprite.svg#icon-heart-solid"></use>
                             </svg>
                         </span>
                     </h3>
@@ -150,13 +160,14 @@
             </figure>
         </a>
     </section>
+    <!--Footer-->
     <footer class="footer">
         <h1 class="logo logo--footer">ohmyfood</h1>
         <ul class="footer__list">
             <li class="footer__item">
                 <a href="#" class="footer__link footer__link--bold">
                     <svg class="footer__icon icon icon--white">
-                        <use xlink:href="images/icons/sprite.svg#icon-utensils"></use>
+                        <use xlink:href="assets/images/icons/sprite.svg#icon-utensils"></use>
                     </svg>
                     Proposer un restaurant
                 </a>
@@ -164,7 +175,7 @@
             <li class="footer__item">
                 <a href="#" class="footer__link footer__link--bold">
                     <svg class="footer__icon icon icon--white">
-                        <use xlink:href="images/icons/sprite.svg#icon-hands-helping"></use>
+                        <use xlink:href="assets/images/icons/sprite.svg#icon-hands-helping"></use>
                     </svg>
                     Devenir partenaire
                 </a>

@@ -1,6 +1,5 @@
-//INNER PAGE
-
 @keyframes displayDishes {
+    /* Animation pour l'affichage différé des plats */
     0%{
         opacity: 0;
         transform: translateY(10rem);
@@ -13,15 +12,16 @@
     }
 }
 
-//LOADER
-
+/*LOADER*/
 @keyframes hidden-loader{
+    /*Permet de masquer le loader*/
     100%{
         visibility: hidden;
     }
 }
 
 @keyframes spinner{
+    /* Permet la rotation du spinner */
     from{
         transform: rotate(0);
     }
@@ -30,8 +30,10 @@
         transform: rotate(360deg);
     }
 }
-
+    
+/* Au debut de l'animation, les balles se trouve au même point, superposé, l'un sur au dessus de l'autre */
 @keyframes ball-1{
+    /* La balle 1 se deplace de bas en haut */
     0%{
         transform: translate(0,0);
     }
@@ -41,6 +43,7 @@
 }
 
 @keyframes ball-2{
+    /* la balle 2 se deplace de gauche vers la droite */ 
     0%{
         transform: translate(0,-100%);
     }
@@ -50,6 +53,7 @@
 }
 
 @keyframes ball-3{
+    /* la balle 3 se deplace de la droite vers la gauche */ 
     0%{
         transform: translate(0,-200%);
     }

@@ -155,7 +155,7 @@ button{
     padding: 0 2rem;
 }
 
-/* magnifying glass icon */
+/* magnifying glass icon => icon loupe */
 .search__btn-icon.icon-box{
     display: none;
 }
@@ -213,8 +213,9 @@ button{
 }
 
 .filter{
+    font-family: inherit;
     font-size: inherit;
-    font-weight: 600;
+    font-weight: 700;
     border: solid 2px #d9d9d9;
     border-radius: 5rem;
     height: 5rem;
@@ -391,7 +392,7 @@ button{
 .card__rating .icon{
     margin-right: 2px;
 }
-/*  CARD MOREST POPULAR */
+/*  CARD MOREST POPULAR => Carte les plus populaires */
 .card--popular{
     grid-template-columns: repeat(5,1fr);
     grid-template-rows: repeat(5, 3rem);
@@ -458,12 +459,12 @@ button{
     justify-content: center;
 }
 
-/* map marker icon */
+/* map marker icon => icon localisation*/
 .icon-box--gray{
     background-color: var(--color-gray-light);
     border-radius: 1.5rem 0 0 1.5rem;
 }
-/* info icon - lodging section */
+/* info icon container- lodging section => container icon info - section hebergement*/
 .icon-box--info{
     height: 2.5rem;
     width: 2.5rem;
@@ -486,7 +487,7 @@ button{
     width: 2rem;
 }
 
-/* info icon & star icon - lodging section */
+/* info icon & star icon - lodging section => icon info et etoile section hebergement*/
 .icon--15{
     height: 1.5rem;
     width: 1.5rem;
@@ -517,10 +518,11 @@ button{
 =================*/
 
 /* large device */
-
+/* min-width : 2000px */
 @media only screen and (min-width: 125em){
     html{
-        font-size: 80%;
+        /* 14 / 16 = 0.875 => defined 1rem = 8px */
+        font-size: 87.5%;
     }
     body{
         font-size: 2rem;
@@ -536,6 +538,7 @@ button{
     }
 }
 
+/* max-width: 1340px */
 @media only screen and (max-width: 83.75em){
     html{
         /* 8 / 16 = 0.5 => defined 1rem = 8px */
@@ -564,7 +567,8 @@ button{
     }
 }
 
-/* LAYOUT OF ACTIVITIES IN DESKTOP FORMAT*/
+/* LAYOUT OF ACTIVITIES IN DESKTOP FORMAT => Mise en page de la section Activités au format desktop*/
+/* min-width:  950px*/
 @media only screen and (min-width: 59.375em){
     .activities{
         display: grid;
@@ -616,9 +620,8 @@ button{
     }
 }
 
-
-
 /* medium device */
+/* max-width:  1100px*/
 @media only screen and (max-width: 68.75em){
     .container{
         grid-template-columns: 1fr 100% 1fr;
@@ -629,12 +632,15 @@ button{
     }
 }
 
+/* min-widht : 600px and max-width:  1100px*/
 @media only screen and (min-width:37.5em) and (max-width: 68.75em){
     .container > *:not(:last-child){
         padding: 0 3rem;
     }
 }
 
+/* Card morest popular => Carte les plus populaires */
+/* min-width: 740px and max-width: 1100px */
 @media only screen and (min-width:46.25em) and (max-width: 68.75em){
     
     .card--popular{
@@ -661,6 +667,7 @@ button{
     }
 }
 
+/* max-width: 950px  */
 @media only screen and (max-width: 59.375em){
 
     .lodging__available{
@@ -694,12 +701,14 @@ button{
 }
 
 /* mobile device */
+/* max-width: 760px */
 @media only screen and (max-width: 47.5em){
     .lodging__popular .card-link{
         grid-column: 1 / -1;
     }
 }
 
+/* max-width:  600px*/
 @media only screen and (max-width: 37.5em){
     .container{
         padding: 0;
@@ -754,10 +763,6 @@ button{
         font-size: 2.4rem;
     }
 
-    .search{
-        /* margin: 0; */
-    }
-
     .search__input{
         flex: 1;
     }
@@ -779,7 +784,7 @@ button{
         HEADER END
     ================*/
     /*=========================
-        LODGING SECTION START
+        LODGING SECTION START => Section hébergement
     =========================*/
     .lodging{
         grid-gap: 0;
@@ -821,7 +826,7 @@ button{
     }
 
     .card__body{
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 
 }
